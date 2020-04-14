@@ -29,13 +29,16 @@ public class MainActivity extends AppCompatActivity {
     // Set speech code request, so that message can be filtered by code (but I do not use it in this code)
     private static final int SPEECH_REQUEST_CODE = 0;
 
-    // Ques for sending requests to the server (ESP controller)
+    // Constant with IP number
+    private static final String ESP_CONTROLLER_IP = "192.168.4.1";
+
+    // Queue for sending requests to the server (ESP controller)
     private RequestQueue queue;
 
     //On action create (when MainActivity is started)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        // Call standard thing which should be done on creation of any activity
+        // Call super method which should be done on creation of any activity
         super.onCreate(savedInstanceState);
 
         // Set Activity View (which an App page with pictures)
@@ -50,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
         // Initialize speech button as a constant, find corresponding button on the view
         final FloatingActionButton speechButton = findViewById(R.id.speech_button_id);
 
-        // On button click, call function
+        // On button click, call display speech organizer
         speechButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 displaySpeechRecognizer();
@@ -62,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    // For each button: find it in the view, set on click event to send request
+    // For each image button: find it in the view, set on click event to send request
     // to the server with corresponding emotion name
     private void initEmotionButtons() {
         final ImageButton angryButton = findViewById(R.id.angry_button_id);
@@ -195,7 +198,7 @@ public class MainActivity extends AppCompatActivity {
     // Preparing to make a request
     // Create request object for selected emotion
     private StringRequest getRequest(Emotion emotion) {
-        return new StringRequest(Request.Method.GET, "http://192.168.4.1/emotion/" + emotion,
+        return new StringRequest(Request.Method.GET, "http://" + ESP_CONTROLLER_IP + "/emotion/" + emotion,
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {

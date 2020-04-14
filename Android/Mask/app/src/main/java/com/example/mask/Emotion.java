@@ -21,7 +21,7 @@ public enum Emotion {
     VERY_FUNNY,
     VERY_GOOD;
 
-    // Converting emotion name to lover case (just for convenience)
+    // Converting emotion name to lower case (just for convenience)
     @Override
     public String toString() {
         return name().toLowerCase();
@@ -31,6 +31,7 @@ public enum Emotion {
     // If matched successfully return value, otherwise nil (no match found)
     public static Emotion getEmotionFromText(String text) {
         for (Emotion value : Emotion.values()) {
+          // Try to find emotion name without underscores
             if (text.contains(value.toString().replaceAll("_", " "))) {
                 return value;
             }

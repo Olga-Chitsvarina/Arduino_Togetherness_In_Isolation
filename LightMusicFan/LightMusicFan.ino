@@ -37,10 +37,10 @@ void setup() {
 }
 
 // Loop that checks if there was user input (button click)
-// Depending on inputand current state it decides what to do next
-void loop() {    
-  // If button the for music was clicked, music has not started, and counter is greater 10 
-  // then send message to python scrip to start music, change state to started music and reset counter
+// Depending on input and current state it decides what to do next
+void loop() {
+  // If button the for music was clicked, music has not started, and counter is greater 10
+  // then send message to python script to start music, change state to started music and reset counter
   // (music control needs bigger counter than lights, so that python script reads messages properly)
   if ((digitalRead(MUSIC_BUTTON)==HIGH) && (!STARTED_MUSIC) && (count>10) ){
       send("StartBirds");
@@ -48,8 +48,8 @@ void loop() {
       count = 0;
   }
 
-  // If button the for music was clicked, music has started, and counter is greater 10 
-  // then send message to python scrip to stop music, change state to not started for music and reset counter
+  // If button the for music was clicked, music has started, and counter is greater 10
+  // then send message to python script to stop music, change state to not started for music and reset counter
   // (music control needs bigger counter than lights, so that python script reads messages properly)
   if ((digitalRead(MUSIC_BUTTON)==HIGH) && (STARTED_MUSIC) && (count>10) ){
       send("StopBirds");
@@ -67,7 +67,7 @@ void loop() {
   }
 
   // If light button was clicked, light started, and counter is greater than 3 (some wait between button clicks)
-  // then turn off light, change state to not started light, reset counter  
+  // then turn off light, change state to not started light, reset counter
   if ((digitalRead(LIGHT_BUTTON)==HIGH) && (STARTED_LIGHT) && (count>3) ){
       digitalWrite(LIGHT_PIN_1, LOW);
       digitalWrite(LIGHT_PIN_2, LOW);
@@ -78,7 +78,7 @@ void loop() {
 
   // If fan button was clicked, fan has not started yet, counter is greater than 3 (some wait between button clicks)
   // then start fan, change state to started fan, reset counter to 0
-   if ((digitalRead(FAN_BUTTON)==HIGH) && (!STARTED_FAN) && (count>3) ){ 
+   if ((digitalRead(FAN_BUTTON)==HIGH) && (!STARTED_FAN) && (count>3) ){
     digitalWrite(FAN_PIN, HIGH);
     STARTED_FAN = true;
     count = 0;
@@ -111,14 +111,14 @@ void send(String message){
   delay(50);
 }
 
-/* REFERENCES: 
-* 1) Code for Assignment 1: 
+/* REFERENCES:
+* 1) Code for Assignment 1:
 * https://github.com/Olga-Chitsvarina/Arduino/blob/master/lcd_display/lcd_display.ino
-* 2) Code from first trial with Python Script for Assignment 2: 
+* 2) Code from first trial with Python Script for Assignment 2:
 * https://github.com/Olga-Chitsvarina/Arduino-Musical-Instrument/commit/9d6f0b9ff605cd5f3fa7680977aacec84ca2638b
-* 3) Build in Arduino IDE examples for 
+* 3) Build in Arduino IDE examples for
 * Servo (Knob, Sweep), Basics (Blink)
-* 4) This video that explains basics of working with transistors: 
+* 4) This video that explains basics of working with transistors:
 * https://www.youtube.com/watch?v=gEMBXxWKUS0
 * 5) Code for Assignment 3:
 * https://github.com/Olga-Chitsvarina/Arduino-Weather-Machine/blob/master/weather/weather.ino
