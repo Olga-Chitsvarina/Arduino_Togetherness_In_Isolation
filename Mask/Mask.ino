@@ -87,4 +87,6 @@ void startWebServer() {
 4) Sending request from Android: https://developer.android.com/training/volley/simple
 5) Examples for M5Stack-Core-ESP32 in Arduino IDE
 6) Installation Quick start guide which has been shipped together with ESP32 microcontroller helped to install libraries
+7) M5Stack Webserver http://community.m5stack.com/topic/391/i-need-help-with-a-webserver-project/4
+8) Getting query params: https://techtutorialsx.com/2017/12/17/esp32-arduino-http-server-getting-query-parameters/
 */

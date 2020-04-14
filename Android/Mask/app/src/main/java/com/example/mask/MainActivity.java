@@ -251,3 +251,4 @@ public class MainActivity extends AppCompatActivity {
 // References:
 // 1) Send simple request from android: https://developer.android.com/training/volley/simple
 // 2) General Developer guide: https://developer.android.com/guide
+// 3) Remove space in grid layout https://stackoverflow.com/questions/42381386/how-to-remove-space-in-between-android-grid-layout
