@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Set ids and other properties for every picture, such height, width, display layout, position on screen -->
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <GridLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|center_horizontal"
+        android:columnCount="3"
+        android:rowCount="6">
+
+        <ImageButton
+            android:id="@+id/very_funny_button_id"
+            android:layout_height="75dp"
+            android:layout_width="75dp"
+            android:src="@drawable/very_funny"
+            android:adjustViewBounds="true"
+            android:scaleType="centerInside"
+            android:background="#ffffff"
+            android:padding="0dp"
+            android:layout_margin="5dp"/>
+
+        <ImageButton
+            android:id="@+id/happy_button_id"
+            android:layout_height="75dp"
+            android:layout_width="75dp"
+            android:src="@drawable/happy"
+            android:adjustViewBounds="true"
+            android:scaleType="centerInside"
+            android:background="#ffffff"
+            android:padding="0dp"
+            android:layout_margin="5dp"/>
+
+        <ImageButton
+            android:id="@+id/kiss_button_id"
+            android:layout_height="75dp"
+            android:layout_width="75dp"
+            android:src="@drawable/kiss"
+            android:adjustViewBounds="true"
+            android:scaleType="centerInside"
+            android:background="#ffffff"
+            android:padding="0dp"
+            android:layout_margin="5dp"/>
+
+        <ImageButton
+            android:id="@+id/cozy_button_id"
+            android:layout_height="75dp"
+            android:layout_width="75dp"
+            android:src="@drawable/cozy"
+            android:adjustViewBounds="true"
+            android:scaleType="centerInside"
+            android:background="#ffffff"
+            android:padding="0dp"
+            android:layout_margin="5dp"/>
+
+        <ImageButton
+            android:id="@+id/no_button_id"
+            android:layout_height="75dp"
+            android:layout_width="75dp"
+            android:src="@drawable/no"
+            android:adjustViewBounds="true"
+            android:scaleType="centerInside"
+            android:background="#ffffff"
+            android:padding="0dp"
+            android:layout_margin="5dp"/>
+
+        <ImageButton
+            android:id="@+id/sleepy_button_id"
+            android:layout_height="75dp"
+            android:layout_width="75dp"
+            android:src="@drawable/sleepy"
+            android:adjustViewBounds="true"
+            android:scaleType="centerInside"
+            android:background="#ffffff"
+            android:padding="0dp"
+            android:layout_margin="5dp"/>
+
+        <ImageButton
+            android:id="@+id/very_good_button_id"
+            android:layout_height="75dp"
+            android:layout_width="75dp"
+            android:src="@drawable/very_good"
+            android:adjustViewBounds="true"
+            android:scaleType="centerInside"
+            android:background="#ffffff"
+            android:padding="0dp"
+            android:layout_margin="5dp"/>
+        
+        <ImageButton
+            android:id="@+id/exciting_button_id"
+            android:layout_height="75dp"
+            android:layout_width="75dp"
+            android:src="@drawable/exciting"
+            android:adjustViewBounds="true"
+            android:scaleType="centerInside"
+            android:background="#ffffff"
+            android:padding="0dp"
+            android:layout_margin="5dp"/>
+
+        <ImageButton
+            android:id="@+id/love_it_button_id"
+            android:layout_height="75dp"
+            android:layout_width="75dp"
+            android:src="@drawable/love_it"
+            android:adjustViewBounds="true"
+            android:scaleType="centerInside"
+            android:background="#ffffff"
+            android:padding="0dp"
+            android:layout_margin="5dp"/>
+
+        <ImageButton
+            android:id="@+id/please_button_id"
+            android:layout_height="75dp"
+            android:layout_width="75dp"
+            android:src="@drawable/please"
+            android:adjustViewBounds="true"
+            android:scaleType="centerInside"
+            android:background="#ffffff"
+            android:padding="0dp"
+            android:layout_margin="5dp"/>
+
+        <ImageButton
+            android:id="@+id/poop_button_id"
+            android:layout_height="75dp"
+            android:layout_width="75dp"
+            android:src="@drawable/poop"
+            android:adjustViewBounds="true"
+            android:scaleType="centerInside"
+            android:background="#ffffff"
+            android:padding="0dp"
+            android:layout_margin="5dp"/>
+
+        <ImageButton
+            android:id="@+id/grumpy_button_id"
+            android:layout_height="75dp"
+            android:layout_width="75dp"
+            android:src="@drawable/grumpy"
+            android:adjustViewBounds="true"
+            android:scaleType="centerInside"
+            android:background="#ffffff"
+            android:padding="0dp"
+            android:layout_margin="5dp"/>
+
+        <ImageButton
+            android:id="@+id/great_button_id"
+            android:layout_height="75dp"
+            android:layout_width="75dp"
+            android:src="@drawable/great"
+            android:adjustViewBounds="true"
+            android:scaleType="centerInside"
+            android:background="#ffffff"
+            android:padding="0dp"
+            android:layout_margin="5dp"/>
+
+        <ImageButton
+            android:id="@+id/coffee_button_id"
+            android:layout_height="75dp"
+            android:layout_width="75dp"
+            android:src="@drawable/coffee"
+            android:adjustViewBounds="true"
+            android:scaleType="centerInside"
+            android:background="#ffffff"
+            android:padding="0dp"
+            android:layout_margin="5dp"/>
+
+        <ImageButton
+            android:id="@+id/love_you_bear_button_id"
+            android:layout_height="75dp"
+            android:layout_width="75dp"
+            android:src="@drawable/love_you_bear"
+            android:adjustViewBounds="true"
+            android:scaleType="centerInside"
+            android:background="#ffffff"
+            android:padding="0dp"
+            android:layout_margin="5dp"/>
+
+        <ImageButton
+            android:id="@+id/mask_button_id"
+            android:layout_height="75dp"
+            android:layout_width="75dp"
+            android:src="@drawable/mask"
+            android:adjustViewBounds="true"
+            android:scaleType="centerInside"
+            android:background="#ffffff"
+            android:padding="0dp"
+            android:layout_margin="5dp"/>
+
+        <ImageButton
+            android:id="@+id/crying_button_id"
+            android:layout_height="75dp"
+            android:layout_width="75dp"
+            android:src="@drawable/crying"
+            android:adjustViewBounds="true"
+            android:scaleType="centerInside"
+            android:background="#ffffff"
+            android:padding="0dp"
+            android:layout_margin="5dp"/>
+
+        <ImageButton
+            android:id="@+id/angry_button_id"
+            android:layout_height="75dp"
+            android:layout_width="75dp"
+            android:src="@drawable/angry"
+            android:adjustViewBounds="true"
+            android:scaleType="centerInside"
+            android:background="#ffffff"
+            android:padding="0dp"
+            android:layout_margin="5dp"/>
+
+    </GridLayout>
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/speech_button_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:layout_margin="16dp"
+        android:src="@drawable/mic" />
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
