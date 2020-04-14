@@ -7,7 +7,7 @@ WebServer webServer(80); // Create webserver at port 80
 Preferences preferences; // Creating preferences object
 
 
-// Define WiFi configuration constants 
+// Define WiFi configuration constants
 // IP address of the microcontroller in the network that is created by microcontroller,
 // SSID is the name of the WiFi network
 // Setting password for security reasons
@@ -26,7 +26,7 @@ void setup() {
   WiFi.disconnect();
   delay(100);
 
-  // Setting WiFi. 
+  // Setting WiFi.
   // Set Network IP and Mask
   // Set network name and password
   // Mode to access point (esp controller shares WiFi)
@@ -45,14 +45,14 @@ void loop() {
 
 //Starts Webserver on ESP controller
 void startWebServer() {
-  
+
   // Take WiFi and Password from set preferences
   // Start WiFi sharing with defined settings
   String wifi_ssid = preferences.getString("WIFI_SSID");
   String wifi_password = preferences.getString("WIFI_PASSWD");
   WiFi.begin(wifi_ssid.c_str(), wifi_password.c_str());
 
-  
+
   // LCD shows IP of the access point on start
   M5.Lcd.print("Starting Web Server at ");
   M5.Lcd.println(WiFi.softAPIP());
@@ -80,9 +80,11 @@ void startWebServer() {
   webServer.begin();
 }
 
-/* REFERENCES: 
+/* REFERENCES:
 1) Code is based on Arduino IDE Examples for libraries and components:
-2) Once standard M5Stack library is included, then see File -> Examples -> M5Stack -> Advanced -> WiFiSetting
-3) Examples found in File -> WebServe -> PathArgServer
+2) Once standard M5Stack library is included, then: File -> Examples -> M5Stack -> Advanced -> WiFiSetting
+3) Examples found in Arduino IDE: File -> WebServer, File -> WebServer -> PathArgServer
 4) Sending request from Android: https://developer.android.com/training/volley/simple
+5) Examples for M5Stack-Core-ESP32 in Arduino IDE
+6) Installation Quick start guide which has been shipped together with ESP32 microcontroller helped to install libraries
 */
